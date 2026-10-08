@@ -1,5 +1,5 @@
 from itertools import product
-from string import ascii_letters, digits
+from string import ascii_letters, digits, punctuation
 
 # for i in digits:
 #     for j in digits:
@@ -15,8 +15,5 @@ from string import ascii_letters, digits
 #                 print(i, j, k, l)
 
 
-for combination in product(digits, repeat=4):
-    print("".join(combination))
-
-for combination in product(ascii_letters, repeat=4):
+for combination in product(digits + ascii_letters + punctuation, repeat=4):
     print("".join(combination))
